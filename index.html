@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav>
+
+        <img src="data:image/png;base64,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"
+            alt="">
+        <div class="navigation">
+            <ul>
+                <li><a class="active" href="#">Home</a></li>
+
+                <li><a class="active"  href="#about"> About</a></li>
+                <!-- <a class="active" href="Home.html"> Go To Home</a> -->
+                <li><a class="active" href="#blog">Blog</a></li>
+
+                <li><a class="active" href="#course1">Courses</a>
+                <li><a class="active" href="#contact">Contact</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+
+    <!-- Home -->
+    <div id="about">
+    <section id="home">
+
+        <h2>Enhance your Future with Edubridge </h2>
+        <p>
+            EduBridge is an Integrated Workforce Development Organization started by IIM alumni & professors in October
+            2009, EduBridge impacts the entire Career Development life cycle of the unemployed youth of the country. We
+            help the unemployed youth to understand their strengths, build tomorrow’s skills needed by recruiters and
+            secure employment with them, thereby building sustainable careers for our beneficiaries.
+
+        </p>
+        <div class="btn">
+            <a class="blue" href="#">Learn More</a>
+            <a class="yellow" href="#">Visit Course</a>
+        </div>
+
+    </section>
+
+    <!-- Features -->
+
+    <section id="feature">
+        <h1> EduBridge Awsome Feature</h1>
+        <p>Replenish man hav things gathering lights yielding shall you</p>
+        <div class="fea-base">
+
+            <div class="fea-box">
+                <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                <h3>Placement facility</h3>
+                <p>EduBridge is India's leading Workforce Development Platform that helps learners in building careers
+                    with leading corporates through training & other career building services.</p>
+
+            </div>
+
+            <div class="fea-box">
+                <i class="fa fa-file-certificate" aria-hidden="true"></i>
+                <h3>Online Courses</h3>
+                <p>EduBridge has a diversified business model with revenue coming from Learning Solutions, Career
+                    Solutions and Talent Solutions. Headquartered in Mumbai, EduBridge has offices across India and a
+                    strong team of over 500 employees.</p>
+
+            </div>
+
+            <div class="fea-box">
+                <i class="fa fa-award" aria-hidden="true"></i>
+                <h3>Global Certificate</h3>
+                <p>EduBridge offers the best-in-class training experience both in the classrooms at the EduBridge Career
+                    Academies as well in all its online training programs. We offer more than a 100 courses in skill
+                    development.</p>
+
+            </div>
+
+        </div>
+   
+    </section>
+</div>
+    <!-- Courses -->
+    <div id="course1">
+
+    <section id="course">
+        <h1>EduBridge Provide Popular Course</h1>
+        <p>Get 110% job guarantee with our best professional online courses with certificates in India. </p>
+        <div class="course-box">
+            <div class="courses">
+                <img src="Images/images/c1.jpg">
+                <div class="details">
+                    <span> Updated 25/02/2023</span>
+                    <h6>Software Testing Course</h6>
+                    <div class="star">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <span>(400)</span>
+                    </div>
+
+                </div>
+                <div class="cost">
+                    $50.67
+                </div>
+            </div>
+
+            <div class="courses">
+                <img src="Images/images/c2.jpg">
+                <div class="details">
+                    <span> Updated 21/03/2023</span>
+                    <h6> Back End Developer</h6>
+                    <div class="star">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <span>(400)</span>
+                    </div>
+
+                </div>
+                <div class="cost">
+                    $50.67
+                </div>
+            </div>
+
+            <div class="courses">
+                <img src="Images/images/c3.jpg">
+                <div class="details">
+                    <span> Updated 10/02/2023</span>
+                    <h6>Fornt End Developer</h6>
+                    <div class="star">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <span>(400)</span>
+                    </div>
+
+                </div>
+                <div class="cost">
+                    $50.67
+                </div>
+            </div>
+            <div class="courses">
+                <img src="Images/images/c4.jpg">
+                <div class="details">
+                    <span> Updated 15/04/2023</span>
+                    <h6>Java FullStack Course</h6>
+                    <div class="star">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <span>(400)</span>
+                    </div>
+
+                </div>
+                <div class="cost">
+                    $50.67
+                </div>
+            </div>
+            <div class="courses">
+                <img src="Images/images/c5.jpg">
+                <div class="details">
+                    <span> Updated 16/04/2023</span>
+                    <h6>Web Development Course</h6>
+                    <div class="star">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <span>(400)</span>
+                    </div>
+
+                </div>
+                <div class="cost">
+                    $50.67
+                </div>
+            </div>
+            <div class="courses">
+                <img src="Images/images/c6.jpg">
+                <div class="details">
+                    <span> Updated 21/04/2023</span>
+                    <h6>Java FullStack Course</h6>
+                    <div class="star">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <span>(400)</span>
+                    </div>
+
+                </div>
+                <div class="cost">
+                    $50.67
+                </div>
+            </div>
+        </div>
+    </section>
+    </div>
+
+    <!--Registration Form  -->
+ <div id="contact">
+    <section id="registration">
+        <div class="reminder">
+            <p>Get 100 Online Course For Free</p>
+            <h1>Register To get it</h1>
+            <div class="time">
+
+                <div class="date">
+                    18 <br> Days
+                </div>
+                <div class="date">
+                    23 <br> Hours
+                </div>
+                <div class="date">
+                    06 <br> Mins
+                </div>
+                <div class="date">
+                    58 <br> Second
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="form">
+            <h3>Create Account For Free</h3>
+            <input type="text" placeholder="Enter your Name" name="" id="">
+            <input type="text" placeholder="Enter your Email" name="" id="">
+            <input type="text" placeholder="Enter your Mob number" name="" id="">
+            <div class="btn">
+                <a class="yellow" href="#">Submit</a>
+
+            </div>
+        </div>
+    </section>
+    </div>
+
+    <!-- Profiles -->
+ <div id="blog">
+    <section id="expert">
+        <h1>Community Experts</h1>
+        <p>We deliver extremely impactful CSR programs in the domain of career development/employment focused skill
+            development for our partners PAN India and train over 50,000 youth annually. </p>
+        <div class="expert-box">
+            <div class="profile">
+                <img src="Images/images/pro1.webp">
+                <h6>Kajal Bhatia</h6>
+                <p>Python and Algorith Expert</p>
+                <div class="pro-link">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-linkedin-in"></i>
+
+                </div>
+
+
+            </div>
+
+            <div class="profile">
+                <img src="Images/images/pro2.webp">
+                <h6>Sushmita Tankkar</h6>
+                <p>Data Design Expert</p>
+                <div class="pro-link">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-linkedin-in"></i>
+
+                </div>
+
+
+            </div>
+
+            <div class="profile">
+                <img src="Images/images/pro3.webp">
+                <h6>shfak Ahammed kp</h6>
+                <p>Full Stack Developer</p>
+                <div class="pro-link">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-linkedin-in"></i>
+
+                </div>
+
+
+            </div>
+
+            <div class="profile">
+                <img src="Images/images/pro4.webp">
+                <h6>Ms. Ayesha S</h6>
+                <p>Back End Developer</p>
+                <div class="pro-link">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-linkedin-in"></i>
+
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+    </section>
+    </div>
+    <!-- Footer -->
+
+    <footer>
+        <div class="footer-col">
+            <h3>Top Products</h3>
+            <li>Manage Peputation</li>
+            <li>Power Tools</li>
+            <li>Managed Website</li>
+            <li>Marketing Service</li>
+
+        </div>
+
+        <div class="footer-col">
+            <h3>SERVICES</h3>
+            <li>ECA-Blended Training</li>
+            <li>EOn-Online Training</li>
+            <li>Placement Services</li>
+            <li>Marketing Service</li>
+
+        </div>
+
+        <div class="footer-col">
+            <h3>MORE</h3>
+            <li>Secure Your Salary- DGTPP</li>
+            <li>Refer and Earn</li>
+            <li>Hire From Us</li>
+            <li>Terms and Conditions</li>
+
+        </div>
+
+        <div class="footer-col">
+            <h3>Top Products</h3>
+            <li>Manage Peputation</li>
+            <li>Power Tools</li>
+            <li>Managed Website</li>
+            <li>Marketing Service</li>
+
+        </div>
+        <div class="footer-col">
+            <h3>NewsLetters</h3>
+            <p>You can Trust us. we only send promo offres,</p>
+            <div class="subscribe">
+                <input type="text" placeholder="Your mail Address">
+                <a href="#" class="yellow">SUBSCRIBE</a>
+            </div>
+
+
+        </div>
+
+        <div class="copy">
+            <p> Copyright @2023 All right reserved | this template is made by EduBridge</p>
+            <p>FOLLOW US </p>
+            <div class="pro-link">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-linkedin-in"></i>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
